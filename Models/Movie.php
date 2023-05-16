@@ -17,7 +17,7 @@ class Movie{
         $this->image = $image;
     }
 
-    public function languageImg(){
-        
+    public function stars(){
+        return $this->vote / 2;
     }
 }

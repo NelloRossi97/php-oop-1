@@ -1,6 +1,7 @@
 <?php 
 include __DIR__.'./Models/Movie.php';
-include __DIR__.'./data/db.php'
+include __DIR__ . './data/db.php';
+var_dump($padrino->stars())
 ?>
 
 <?php include __DIR__.'./partials/template/head.php' ?>
@@ -39,7 +40,7 @@ include __DIR__.'./data/db.php'
         </div>
         
         <div>
-            <input type="text" placeholder="Cerca film o serie TV" class="me-3" v-model="store.params.query" @keyup="$emit('onSearch')">
+            <input type="text" placeholder="Cerca film o serie TV" class="me-3">
         </div>
     </nav>
 </header>
@@ -56,7 +57,12 @@ include __DIR__.'./data/db.php'
                     <h4><?php echo $movie->title; ?></h4>
                     <span>Genere: <?php echo $movie->genre; ?></span>
                     <span>Lingua: <?php echo $movie->language; ?></span>
-                    <span>Voto: <?php echo $movie->vote; ?></span>
+                    <span>
+                        Voto: 
+                        <i class="fa-star" 
+                        v-for="(n, index) in 5"
+                        :class="(n <= <?php $movie->stars()?>) ? 'fa-solid' : 'fa-regular'"></i>
+                    </span>
                     <span>Anno: <?php echo $movie->year; ?></span>
                 </div>
             </div>
