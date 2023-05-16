@@ -1,3 +1,28 @@
+<?php 
+class Movie{
+    public $id;
+    public $title;
+    public $genre;
+    public $language;
+    public $vote;
+    public $year;
+    public $image;
+    public function __construct(int $id, string $title, string $genre, string $language, int $vote, string $year, string $image){
+        $this->id = $id;
+        $this->title = $title;
+        $this->genre = $genre;
+        $this->language = $language;
+        $this->vote = $vote;
+        $this->year = $year;
+        $this->image = $image;
+    }
+}
+
+$padrino = new Movie(1, 'Il Padrino', 'Gangster', 'en', 10, '1972', 'https://pad.mymovies.it/filmclub/2002/08/056/locandina.jpg' );
+$via_col_vento = new Movie(2,'Via col vento' ,'Romantico', 'it', 8, '1939','https://m.media-amazon.com/images/I/51FvKgUQ1lL.jpg');
+
+?>
+
 <?php include './partials/template/head.php' ?>
 <!-- 
     Oggi pomeriggio ripassate i primi concetti di classe, variabili e metodi d'istanza che abbiamo visto stamattina e create un file index.php in cui:
