@@ -50,12 +50,16 @@ include __DIR__ . './data/db.php';
             <?php foreach($movies_list as $movie){?>
             <div id="mycard" class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex flex-column justify-content-center rounded-4 overflow-hidden p-0">
                 <div class="image">
-                    <img src="<?php echo $movie->image; ?>" alt="logo" class="img-fluid">
+                    <img src="<?php echo $movie->image; ?>" alt="logo" class="w-100 h-100">
                 </div>
-                <div class="info px-4 d-flex flex-column justify-content-between overflow-auto">
+                <div class="info p-4 d-flex flex-column justify-content-between overflow-auto">
                     <h4><?php echo $movie->title; ?></h4>
                     <span>Genere: <?php echo $movie->genre; ?></span>
-                    <span>Lingua: <?php echo $movie->language; ?></span>
+                    <div class="language">
+                        <span>Lingua:</span> 
+                        <?php echo $movie->getFlag(); ?>
+                    </div>
+                    
                     <span>
                         Voto: <?php echo $movie->stars()?>
                     </span>

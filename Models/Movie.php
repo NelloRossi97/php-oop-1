@@ -7,6 +7,7 @@ class Movie{
     public $vote;
     public $year;
     public $image;
+    public $availableFlags = ['en', 'it', 'es', 'de', 'fr'];
     public function __construct(int $id, string $title, string $genre, string $language, int $vote, string $year, string $image){
         $this->id = $id;
         $this->title = $title;
@@ -26,6 +27,11 @@ class Movie{
                 echo '<i class="fa-star fa-regular"></i>';
             }
             
+        }
+    }
+    public function getFlag(){
+        if(in_array($this->language,$this->availableFlags)){
+            return "<img src='images/$this->language.png' alt='$this->language'>";
         }
     }
 }
