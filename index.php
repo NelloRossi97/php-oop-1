@@ -73,9 +73,30 @@ $via_col_vento = new Movie(2,'Via col vento' ,'Romantico', 'it', 8, '1939','http
 
 <main>
     <div class="container">
-        <div class="row">
-            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-                
+        <div class="row mt-4 gap-3 align-items-center flex-nowrap overflow-auto p-3">
+            <div id="mycard" class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex flex-column justify-content-center rounded-4 overflow-hidden p-0">
+                <div class="image">
+                    <img src="<?php echo $padrino->image; ?>" alt="logo" class="img-fluid">
+                </div>
+                <div class="info px-4 d-flex flex-column justify-content-between overflow-auto">
+                    <h4><?php echo $padrino->title; ?></h4>
+                    <span>Genere: <?php echo $padrino->genre; ?></span>
+                    <span>Lingua: <?php echo $padrino->language; ?></span>
+                    <span>Voto: <?php echo $padrino->vote; ?></span>
+                    <span>Anno: <?php echo $padrino->year; ?></span>
+                </div>
+            </div>
+            <div id="mycard" class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex flex-column justify-content-center rounded-4 overflow-hidden p-0">
+                <div class="image">
+                    <img src="<?php echo $via_col_vento->image; ?>" alt="logo" class="img-fluid">
+                </div>
+                <div class="info px-4 d-flex flex-column justify-content-between overflow-auto">
+                    <h4><?php echo $via_col_vento->title; ?></h4>
+                    <span>Genere: <?php echo $via_col_vento->genre; ?></span>
+                    <span>Lingua: <?php echo $via_col_vento->language; ?></span>
+                    <span>Voto: <?php echo $via_col_vento->vote; ?></span>
+                    <span>Anno: <?php echo $via_col_vento->year; ?></span>
+                </div>
             </div>
         </div>
     </div>
