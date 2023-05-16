@@ -18,6 +18,14 @@ class Movie{
     }
 
     public function stars(){
-        return $this->vote / 2;
+        $rate = $this->vote/2;
+        for ($i = 0; $i < 5; $i++){
+            if($i < $rate){
+                echo '<i class="fa-star fa-solid"></i>';
+            } else {
+                echo '<i class="fa-star fa-regular"></i>';
+            }
+            
+        }
     }
 }

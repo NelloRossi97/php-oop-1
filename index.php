@@ -1,7 +1,6 @@
 <?php 
 include __DIR__.'./Models/Movie.php';
 include __DIR__ . './data/db.php';
-var_dump($padrino->stars())
 ?>
 
 <?php include __DIR__.'./partials/template/head.php' ?>
@@ -46,7 +45,7 @@ var_dump($padrino->stars())
 </header>
 
 <main>
-    <div id="app" class="container">
+    <div class="container">
         <div class="row mt-4 gap-3 align-items-center flex-nowrap overflow-auto p-3">
             <?php foreach($movies_list as $movie){?>
             <div id="mycard" class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex flex-column justify-content-center rounded-4 overflow-hidden p-0">
@@ -58,10 +57,7 @@ var_dump($padrino->stars())
                     <span>Genere: <?php echo $movie->genre; ?></span>
                     <span>Lingua: <?php echo $movie->language; ?></span>
                     <span>
-                        Voto: 
-                        <i class="fa-star" 
-                        v-for="(n, index) in 5"
-                        :class="(n <= <?php $movie->stars() ?> ) ? 'fa-solid' : 'fa-regular'"></i>
+                        Voto: <?php echo $movie->stars()?>
                     </span>
                     <span>Anno: <?php echo $movie->year; ?></span>
                 </div>
