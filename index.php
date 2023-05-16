@@ -21,6 +21,7 @@ class Movie{
 $padrino = new Movie(1, 'Il Padrino', 'Gangster', 'en', 10, '1972', 'https://pad.mymovies.it/filmclub/2002/08/056/locandina.jpg' );
 $via_col_vento = new Movie(2,'Via col vento' ,'Romantico', 'it', 8, '1939','https://m.media-amazon.com/images/I/51FvKgUQ1lL.jpg');
 
+
 ?>
 
 <?php include './partials/template/head.php' ?>
@@ -41,8 +42,43 @@ $via_col_vento = new Movie(2,'Via col vento' ,'Romantico', 'it', 8, '1939','http
     - creando un file dedicato ai dati (tipo le array di oggetti) che potremmo chiamare db.php
     - mettendo ciascuna classe nel proprio file e magari raggruppare tutte le classi in una cartella dedicata che possiamo chiamare Models/
     - organizzando il layout dividendo la struttura ed i contenuti in file e parziali dedicati. -->
+<header class="container-fluid">
+    <nav class="d-flex justify-content-between align-items-center h-100 p-3">
+        <div class="d-flex align-items-center p-1 h-100">
+            <img src="./images/logo.png" alt="logo">
+            <ul class="nav d-none d-lg-flex">
+                <li class="nav-item">
+                    <a href="" class="nav-link text-white">Home</a> 
+                </li>
+                <li class="nav-item">
+                    <a href="" class="nav-link text-white">Serie TV</a> 
+                </li>
+                <li class="nav-item">
+                    <a href="" class="nav-link text-white">Film</a> 
+                </li>
+                <li class="nav-item">
+                    <a href="" class="nav-link text-white">Nuovi e popolari</a> 
+                </li>
+                <li class="nav-item">
+                    <a href="" class="nav-link text-white">Sfoglia per lingua</a> 
+                </li>
+            </ul>
+        </div>
+        
+        <div>
+            <input type="text" placeholder="Cerca film o serie TV" class="me-3" v-model="store.params.query" @keyup="$emit('onSearch')">
+        </div>
+    </nav>
+</header>
+
 <main>
-    main
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                
+            </div>
+        </div>
+    </div>
 
 </main>
 
