@@ -16,4 +16,8 @@ class Movie{
         $this->year = $year;
         $this->image = $image;
     }
+
+    public function languageImg(){
+        
+    }
 }

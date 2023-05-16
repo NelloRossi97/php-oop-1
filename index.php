@@ -1,12 +1,6 @@
 <?php 
 include __DIR__.'./Models/Movie.php';
-
-$padrino = new Movie(1, 'Il Padrino', 'Gangster', 'en', 10, '1972', 'https://pad.mymovies.it/filmclub/2002/08/056/locandina.jpg' );
-$via_col_vento = new Movie(2,'Via col vento' ,'Romantico', 'it', 8, '1939','https://m.media-amazon.com/images/I/51FvKgUQ1lL.jpg');
-
-$movies_list = [$padrino, $via_col_vento];
-
-
+include __DIR__.'./data/db.php'
 ?>
 
 <?php include './partials/template/head.php' ?>
@@ -20,13 +14,7 @@ $movies_list = [$padrino, $via_col_vento];
 
     Bonus 1:
     Modificare la classe Movie in modo che accetti piú di un genere.
-
-    Bonus 2:    
-    Creare un layout completo per stampare a schermo una lista di movies.
-    Facciamo attenzione all’organizzazione del codice, suddividendolo in appositi file e cartelle. Possiamo ad esempio organizzare il codice
-    - creando un file dedicato ai dati (tipo le array di oggetti) che potremmo chiamare db.php
-    - mettendo ciascuna classe nel proprio file e magari raggruppare tutte le classi in una cartella dedicata che possiamo chiamare Models/
-    - organizzando il layout dividendo la struttura ed i contenuti in file e parziali dedicati. -->
+-->
 <header class="container-fluid">
     <nav class="d-flex justify-content-between align-items-center h-100 p-3">
         <div class="d-flex align-items-center p-1 h-100">
