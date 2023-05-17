@@ -1,9 +1,9 @@
 <?php 
-include __DIR__.'./Models/Movie.php';
-include __DIR__ . './data/db.php';
+include __DIR__.'/Models/Movie.php';
+include __DIR__ . '/data/db.php';
 ?>
 
-<?php include __DIR__.'./partials/template/head.php' ?>
+<?php include __DIR__.'/partials/template/head.php' ?>
 <!-- 
     Oggi pomeriggio ripassate i primi concetti di classe, variabili e metodi d'istanza che abbiamo visto stamattina e create un file index.php in cui:
     - è definita una classe ‘Movie’
@@ -72,4 +72,4 @@ include __DIR__ . './data/db.php';
 
 </main>
 
-<?php include __DIR__.'./partials/template/foot.php' ?>
+<?php include __DIR__.'/partials/template/foot.php' ?>
